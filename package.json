@@ -28,6 +28,8 @@
   "homepage": "https://github.com/JCofman/vscodeaction#readme",
   "dependencies": {
     "actions-toolkit": "^2.0.0",
-    "vsce": "^1.61.0"
+    "typescript": "^3.4.5",
+    "vsce": "^1.61.0",
+    "webpack": "^4.31.0"
   }
 }

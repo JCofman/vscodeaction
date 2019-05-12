@@ -19,6 +19,7 @@ async function release() {
     }
   } catch (error) {
     tools.log.error(`Somehting went wrong ${error}`);
+    tools.exit.failure('Failed!');
   }
 }
 

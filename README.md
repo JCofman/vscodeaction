@@ -14,16 +14,14 @@ Trigger a release
 
 ```hcl
 
-workflow "Release Vscode plugin" {
+workflow "Release Vscode Plugin " {
+  resolves = ["Vscode release plugin"]
   on = "release"
-  resolves = ["Release Vscode"]
 }
 
-action "WebPageTestActions" {
-  secrets = [
-    "GITHUB_TOKEN",
-    "PUBLISH_TOKEN",
-  ]
+action "Vscode release plugin" {
+  uses = "JCofman/vscodeaction@v0.1-alpha"
+  secrets = ["PUBLISH_TOKEN"]
 }
 
 ```

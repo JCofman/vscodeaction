@@ -19,10 +19,11 @@ LABEL "com.github.actions.icon"="play"
 LABEL "com.github.actions.color"="gray-dark"
 
 # Copy the package.json and package-lock.json
-COPY package*.json ./
+COPY package.json ./
+COPY yarn.lock ./
 
 # Install dependencies
-RUN npm ci
+RUN yarn
 
 # Copy the rest of your action's code
 COPY . .

@@ -25,6 +25,9 @@ COPY yarn.lock ./
 # Install dependencies
 RUN yarn
 
+RUN yarn global add vsce --prefix /usr/local
+
+
 # Copy the rest of your action's code
 COPY . .
 

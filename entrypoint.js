@@ -1,6 +1,7 @@
 // entrypoint.js
 const { exec } = require('child_process');
 const { Toolkit } = require('actions-toolkit');
+
 const tools = new Toolkit();
 
 // check pre-requirements
@@ -12,7 +13,7 @@ release();
 async function release() {
   const publishToken = process.env.PUBLISH_TOKEN;
   try {
-    let { stdout } = await sh(`yarn vsce:publish -p ${publishToken}`);
+    let { stdout } = await sh(`vsce publish -p ${publishToken}`);
     if (stdout) {
       tools.exit.success(`Succesfully run! ${stdout}`);
     }

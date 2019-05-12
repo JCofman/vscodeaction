@@ -1,6 +1,5 @@
 // entrypoint.js
-import { exec } from 'child_process';
-
+const { exec } = require('child_process');
 const { Toolkit } = require("actions-toolkit");
 const tools = new Toolkit();
 

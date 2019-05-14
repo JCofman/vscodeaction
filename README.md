@@ -1,4 +1,4 @@
-# Vscode action to release a plugin
+# 👌 Vscode action to release a plugin
 
 This Action tries to release a vscode plugin via the [vsce](https://github.com/microsoft/vscode-vsce) tool.
 

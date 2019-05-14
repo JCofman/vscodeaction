@@ -24,7 +24,7 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-RUN npm install -g vsce webpack typescript
+#RUN npm install -g vsce webpack typescript
 
 # Copy the rest of your action's code
 COPY . .

@@ -13,6 +13,11 @@ release();
 async function release() {
   const publishToken = process.env.PUBLISH_TOKEN;
   try {
+    let { test } = await sh(`ls -a`);
+
+    console.log(test);
+    let { test2 } = await sh(`ls github/workspace`);
+    console.log(test2);
     let { stdout } = await sh(`npm run vscode:publish -- -p ${publishToken}`);
     if (stdout) {
       tools.exit.success(`Succesfully run! ${stdout}`);

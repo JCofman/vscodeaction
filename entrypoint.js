@@ -13,7 +13,7 @@ release();
 async function release() {
   const publishToken = process.env.PUBLISH_TOKEN;
   try {
-    let { stdout } = await sh(`vsce publish -p ${publishToken}`);
+    let { stdout } = await sh(`npm run vscode:publish -- -p ${publishToken}`);
     if (stdout) {
       tools.exit.success(`Succesfully run! ${stdout}`);
     }

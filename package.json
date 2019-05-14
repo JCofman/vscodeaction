@@ -22,6 +22,9 @@
     "url": "https://github.com/JCofman/vscodeaction/issues"
   },
   "homepage": "https://github.com/JCofman/vscodeaction#readme",
+  "scripts": {
+    "vscode:publish": "vsce publish"
+  },
   "dependencies": {
     "actions-toolkit": "^2.0.0",
     "typescript": "^3.4.5",

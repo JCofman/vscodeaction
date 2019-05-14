@@ -8,7 +8,7 @@
 #
 # You can specify a version:
 # FROM node:10-slim
-FROM node:slim
+FROM node:10
 
 # Labels for GitHub to read your action
 LABEL "com.github.actions.name"="Vscode release plugin"
@@ -22,10 +22,8 @@ LABEL "com.github.actions.color"="gray-dark"
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
-
-# Copy the rest of your action's code
-COPY . .
+RUN npm install -g vsce
 
 # Run `node /entrypoint.js`
-ENTRYPOINT ["node", "/entrypoint.js"]
+COPY "entrypoint.sh" "/entrypoint.sh"
+ENTRYPOINT ["/entrypoint.sh"]

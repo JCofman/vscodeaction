@@ -18,12 +18,10 @@ LABEL "com.github.actions.icon"="play"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
 LABEL "com.github.actions.color"="gray-dark"
 
-# Copy the package.json and package-lock.json
-COPY package*.json ./
-
 # Install dependencies
-RUN npm install -g vsce
+RUN npm install -g vsce typescript webpack
 
 # Run `node /entrypoint.js`
 COPY "entrypoint.sh" "/entrypoint.sh"
+
 ENTRYPOINT ["/entrypoint.sh"]

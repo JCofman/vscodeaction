@@ -19,7 +19,7 @@ LABEL "com.github.actions.icon"="play"
 LABEL "com.github.actions.color"="gray-dark"
 
 # Install dependencies
-RUN npm install -g vsce typescript webpack
+RUN npm install -g vsce typescript webpack --unsafe-perm
 
 # Run `node /entrypoint.js`
 COPY "entrypoint.sh" "/entrypoint.sh"

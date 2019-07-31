@@ -1,0 +1,31 @@
+Arguments: 
+  /Users/jacobcofman/.nvm/versions/node/v10.16.0/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js global dir
+
+PATH: 
+  /Users/jacobcofman/.yarn-0.27.5/bin:/Users/jacobcofman/.nvm/versions/node/v10.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jacobcofman/Go/bin:/usr/local/opt/go/libexec/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/jacobcofman/git/vscodeaction/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

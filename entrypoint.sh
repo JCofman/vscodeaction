@@ -2,4 +2,5 @@
 
 set -e
 
-sh -c "vsce $* -p $PUBLISH_TOKEN"
+sh -c "message=`yes $PUBLISH_TOKEN vsce login $PUBLISHER` && message=`vsce $* -p $PUBLISH_TOKEN` &&  echo $message`
+

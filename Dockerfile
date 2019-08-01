@@ -21,7 +21,6 @@ LABEL "com.github.actions.color"="gray-dark"
 # Install dependencies
 
 RUN npm install -g vsce typescript webpack --unsafe-perm
-RUN npm install
 
 # Run `node /entrypoint.js`
 COPY "entrypoint.sh" "/entrypoint.sh"

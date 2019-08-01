@@ -6,7 +6,8 @@ Make sure to pass a PUBLISH_TOKEN an explanation on how to register a token can 
 
 ## 🔑 Secrets
 
-- PUBLISH_TOKEN - Required to publish a release to vscode Marketplace
+- PUBLISHER - Required to publish a release to vscode Marketplace
+- PUBLISHER_TOKEN - Required to publish a release to vscode Marketplace
 
 ## 💻 Examples
 

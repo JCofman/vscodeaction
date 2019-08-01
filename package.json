@@ -32,13 +32,13 @@
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^10.12.21",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
     "@types/vscode": "^1.36.0",
     "glob": "^7.1.4",
     "mocha": "^6.1.4",
-    "typescript": "^3.3.1",
-    "tslint": "^5.12.1",
+    "typescript": "^3.5.3",
+    "tslint": "^5.18.0",
     "vscode-test": "^1.0.2"
   }
 }

@@ -2,4 +2,4 @@
 
 set -e
 
-sh -c "yes $PUBLISH_TOKEN | vsce login $PUBLISHER && vsce publish -p $PUBLISH_TOKEN"
+sh -c "yarn && yes $PUBLISH_TOKEN | vsce login $PUBLISHER && vsce $* -p $PUBLISH_TOKEN"

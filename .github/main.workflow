@@ -7,7 +7,7 @@ action "Vscode release plugin" {
   uses = "JCofman/vscodeaction@master"
   args = "publish"
   secrets = [
-    "PUBLISH_TOKEN",
+    "PUBLISHER_TOKEN",
     "PUBLISHER",
   ]
 }

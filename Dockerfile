@@ -8,7 +8,7 @@
 #
 # You can specify a version:
 # FROM node:10-slim
-FROM node:10
+FROM node:10-slim
 
 # Labels for GitHub to read your action
 LABEL "com.github.actions.name"="Vscode release plugin"
@@ -20,7 +20,7 @@ LABEL "com.github.actions.color"="gray-dark"
 
 # Install dependencies
 
-RUN npm install -g vsce typescript webpack --unsafe-perm
+RUN npm install -g vsce
 
 # Run `node /entrypoint.js`
 COPY "entrypoint.sh" "/entrypoint.sh"

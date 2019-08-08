@@ -20,7 +20,7 @@ action "npm install" {
 action "Vscode release plugin" {
   uses = "JCofman/vscodeaction@master"
   secrets = ["PUBLISHER_TOKEN"]
-  args = "publish -p $VSCE_TOKEN"
+  args = "publish -p $PUBLISHER_TOKEN"
   needs = ["Master"]
 }
 

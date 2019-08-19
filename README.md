@@ -34,32 +34,27 @@ You have to create an [Azure DevOps](https://docs.microsoft.com/en-us/azure/devo
 
 Trigger a release
 
-```hcl
-
-workflow "Release Vscode Plugin " {
-  resolves = ["Vscode release plugin"]
-  on = "push"
-}
-
-# Check for master branch
-action "Master" {
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-  needs = ["npm install"]
-}
-
-# install dependencies
-action "npm install" {
-  uses = "actions/npm@master"
-  args = ["install", "--unsafe-perm"]
-}
-
-# run release
-action "Vscode release plugin" {
-  uses = "JCofman/vscodeaction@master"
-  secrets = ["PUBLISHER_TOKEN"]
-  args = "publish -p $VSCE_TOKEN"
-  needs = ["Master"]
-}
-
+```yml
+on: push
+name: 'Release Vscode Plugin'
+jobs:
+  npmInstall:
+    name: npm install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: npm install
+        uses: actions/npm@master
+        with:
+          args: install --unsafe-perm
+      - name: Master
+        uses: actions/bin/filter@master
+        with:
+          args: branch master
+      - name: Vscode release plugin
+        uses: JCofman/vscodeaction@master
+        env:
+          PUBLISHER_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+        with:
+          args: publish -p $PUBLISHER_TOKEN
 ```

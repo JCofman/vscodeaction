@@ -8,10 +8,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: npm install
         run: npm install
-      - name: Master
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
       - name: Vscode release plugin
         uses: JCofman/vscodeaction@master
         env:

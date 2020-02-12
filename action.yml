@@ -1,0 +1,9 @@
+name: 'Vscode plugin release action'
+description: 'This action bundles vsce tool to release a vscode plugin'
+author: 'JCofman'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'play'
+  color: 'gray-dark'

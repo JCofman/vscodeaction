@@ -7,8 +7,8 @@
 # FROM node:alpine
 #
 # You can specify a version:
-# FROM node:10-slim
-FROM node:10-slim
+# FROM node:16-slim
+FROM node:16-slim
 
 # Labels for GitHub to read your action
 LABEL "com.github.actions.name"="Vscode release plugin"

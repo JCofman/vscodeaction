@@ -1,6 +1,6 @@
 {
-  "name": "testextension",
-  "displayName": "testExtension",
+  "name": "vscode-action-test-extension",
+  "displayName": "vscode-action-test-extension",
   "description": "",
   "version": "0.0.5",
   "engines": {
@@ -22,7 +22,7 @@
     ]
   },
   "repository": "https://github.com/JCofman/vscodeaction",
-  "publisher": "vscodeactiontest",
+  "publisher": "vscode-action-test-extension",
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
